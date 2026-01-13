@@ -2,11 +2,12 @@ This repository demonstrates an end-to-end Proof of Value (PoV) for Identity Ver
 
 The system extracts identity attributes from documents (passports, driver’s licenses), validates plausibility, and produces a per-document decision: pass, review, or fail.
 
-#🔹 Architecture
+🔹 Architecture
+
 Image → Fireworks VLM → Structured Extraction → Validation →
 Plausibility Checks → Decision Engine
 
-#🔹 Key Design Decisions & Tradeoffs
+🔹 Key Design Decisions & Tradeoffs
 Decision	                  Why	                                        Tradeoff
 Vision-Language Model	      Handles varied layouts & low-quality scans	Higher cost vs OCR
 Strict JSON schema	          Prevents hallucination & enforces structure	Requires defensive parsing
@@ -14,12 +15,12 @@ Single-document evaluation	  Mirrors real KYC workflows	                No cross
 Conservative decisioning	  FSI compliance friendly	                    More “review” cases
 No inference on missing data  Avoids false positives	                    Lower automation rate
 
-#🔹 Input
+🔹 Input
 Accepts PNG/JPG documents
 Supports passports and driver’s licenses
 One or many documents can be processed independently
 
-#🔹 Output (Per Document)
+🔹 Output (Per Document)
 Each document produces a standalone JSON with:
 Decision at the top (pass / review / fail)
 Risk level
