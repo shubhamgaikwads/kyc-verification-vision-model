@@ -1,0 +1,6 @@
+fireworks
+pillow
+python-dateutil
+rapidfuzz
+pydantic
+openai

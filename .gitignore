@@ -1,0 +1,21 @@
+# Do not commit real documents
+data/input/*
+!data/input/README.md
+
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Outputs (optional; you may keep sample output)
+data/output/*
+!data/output/.gitkeep
+
+.venv/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+
+
